@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+    <title>Spring Boot Thymeleaf Hello World Example</title>
+
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+
+</head>
+
+<body>
+
+<main role="main" class="container">
+    <form id="createUserForm" >
+        <div style="margin: 30px auto; width: 25%;">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="user-addon"> <i class="bi bi-person-circle"></i> </span>
+                <input type="text" class="form-control" name="userName" placeholder="User name"
+                       aria-describedby="userNameHelp" aria-label="UserName">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="email-addon"> <i class="bi bi-envelope-fill"></i> </span>
+                <input type="email" class="form-control" name="email" placeholder="Email address"
+                       aria-describedby="emailHelp">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="phone-addon"> <i class="bi bi-telephone-fill"></i> </span>
+                <select id="phoneCode" class="form-select" name="phoneCode">
+                    <option selected>+380</option>
+                    <option>+750</option>
+                    <option>+250</option>
+                </select>
+                <input type="text" class="form-control" name="phoneNumber" placeholder="Phone number">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="job-addon"> <i class="bi bi-building"></i> </span>
+                <select class="form-select" name="jobName">
+                    <option selected>Select job type</option>
+                    <option value="IT-specialist">IT-specialist</option>
+                    <option value="Businessman">Businessman</option>
+                    <option value="Horse hunter">Horse hunter</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="lock-addon"> <i class="bi bi-lock-fill"></i> </span>
+                <input type="password" class="form-control" name="password" placeholder="Create password">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="lockRepeat-addon"> <i class="bi bi-lock-fill"></i> </span>
+                <input type="password" class="form-control" name="repeatPassword" placeholder="Repeat password">
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Create Account
+            </button>
+        </div>
+    </form>
+</main>
+<!-- /.container -->
+
+<script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</body>
+</html>
